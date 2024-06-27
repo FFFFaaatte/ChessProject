@@ -42,20 +42,6 @@ ChessBoard::ChessBoard() {
     m_pieces[7][6] = std::make_shared<Knight>(0, Coordinate(7, 6));
 }
 
-//std::string ChessBoard::getString() const{
-//    std::string result = "";
-//    for (int i = 0; i < 8; ++i) {
-//        for (int j = 0; j < 8; ++j) {
-//            if (m_pieces[i][j] != nullptr)
-//                result += m_pieces[i][j]->getPieceSymbol() + " ";
-//            else
-//                result += "▢ ";
-
-//        }
-//        result += "\n";
-//    }
-//    return result;
-//}
 
 std::string ChessBoard::getString() const {
     std::string result = "  a b c d e f g h\n";
