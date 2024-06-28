@@ -69,7 +69,7 @@ bool GameManagement::isGameOver() {
 }
 
 void GameManagement::announceWinner() const {
-    std::cout << (m_currentPlayer == BLACK ? "Black" : "White") << " wins!\n";
+    std::cout << (m_currentPlayer == WHITE ? "Black" : "White") << " wins!\n";
 }
 
 bool GameManagement::isValidMove(const Coordinate &from, const Coordinate &to) const {
