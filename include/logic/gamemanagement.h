@@ -3,29 +3,31 @@
 
 #include <memory>
 
-#include "chessboard.h"
-#include "include/coordinate.h"
+#include "include/logic/chessboard.h"
+#include "include/logic/coordinate.h"
+#include "include/logic/player.h"
 
 
 class GameManagement {
 public:
     GameManagement();
 
-    bool makeMove(const Coordinate &from, const Coordinate &to);
-    bool getCurrentPlayer() const;
-    bool isGameOver();
+    void printWelcomeMessage () const;
     void displayBoard() const;
+    bool getCurrentPlayer() const;
+    bool makeMove(const Coordinate &from, const Coordinate &to);
+    bool isGameOver();
     void announceWinner() const;
 
 private:
     ChessBoard m_board;
-    bool m_currentPlayer;
+    Player m_currentPlayer;
 
     bool isValidMove(const Coordinate &from, const Coordinate &to) const;
-    bool isInCheck(bool color) const;
-    bool isCheckmate(bool color);
     void switchPlayer();
     void promotePawn(const Coordinate& coordinate);
+    bool isInCheck(Player color) const;
+    bool isCheckmate(Player color);
 };
 
 #endif // GAMEMANAGEMENT_H

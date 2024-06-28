@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-Bishop::Bishop(bool color, Coordinate coordinate) : ChessPiece(color, coordinate) {}
+Bishop::Bishop(Player color, Coordinate coordinate) : ChessPiece(color, coordinate) {}
 
 std::string Bishop::getPieceSymbol() const {
-    return m_color ? "♝" : "♗";
+    return m_color == BLACK ? "♝" : "♗";
 }
 
 std::vector<Coordinate> Bishop::availableMoves(const ChessBoard &board) const {

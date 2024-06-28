@@ -1,13 +1,12 @@
 #ifndef ROOK_H
 #define ROOK_H
 
-#include <iostream>
-
-#include "include/chesspiece.h"
+#include "include/logic/chesspiece.h"
+#include "include/logic/player.h"
 
 class Rook : public ChessPiece {
 public:
-    Rook(bool color, Coordinate coordinate);
+    Rook(Player color, Coordinate coordinate);
     std::string getPieceSymbol() const override;
     std::vector<Coordinate> availableMoves(const ChessBoard &board) const override;
 };

@@ -4,18 +4,19 @@
 #include <iostream>
 #include <vector>
 
-#include "include/chessboard.h"
-#include "include/coordinate.h"
+#include "include/logic/chessboard.h"
+#include "include/logic/coordinate.h"
+#include "include/logic/player.h"
 
 class ChessBoard;
 
 class ChessPiece {
 protected:
-    bool m_color; // 0 : white & 1 : black
+    Player m_color;
     Coordinate m_coordinate;
 
 public:
-    ChessPiece(bool color, Coordinate coordinate);
+    ChessPiece(Player color, Coordinate coordinate);
     virtual ~ChessPiece() = default;
 
     bool getColor() const;

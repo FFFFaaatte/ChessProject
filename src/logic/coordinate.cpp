@@ -1,4 +1,5 @@
-#include "include/coordinate.h"
+#include "include/logic/coordinate.h"
+#include "include/logic/player.h"
 
 Coordinate::Coordinate(int x, int y) : m_x(x), m_y(y)
 {

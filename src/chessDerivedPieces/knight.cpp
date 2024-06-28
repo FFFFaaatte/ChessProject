@@ -2,12 +2,12 @@
 
 #include <iostream>
 
-#include "include/coordinate.h"
+#include "include/logic/coordinate.h"
 
-Knight::Knight(bool color, Coordinate coordinate) : ChessPiece(color, coordinate) {}
+Knight::Knight(Player color, Coordinate coordinate) : ChessPiece(color, coordinate) {}
 
 std::string Knight::getPieceSymbol() const {
-    return m_color ? "♞" : "♘";
+    return m_color == BLACK ? "♞" : "♘";
 }
 
 std::vector<Coordinate> Knight::availableMoves(const ChessBoard &board) const {

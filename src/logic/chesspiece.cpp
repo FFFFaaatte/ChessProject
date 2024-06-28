@@ -1,13 +1,13 @@
-#include "include/chesspiece.h"
+#include "include/logic/chesspiece.h"
 
 #include <vector>
 #include <iostream>
 
-#include "include/chessboard.h"
-#include "include/coordinate.h"
+#include "include/logic/chessboard.h"
+#include "include/logic/coordinate.h"
 
 
-ChessPiece::ChessPiece(bool color, Coordinate coordinate)
+ChessPiece::ChessPiece(Player color, Coordinate coordinate)
     : m_color(color), m_coordinate(coordinate) {}
 
 bool ChessPiece::getColor() const {

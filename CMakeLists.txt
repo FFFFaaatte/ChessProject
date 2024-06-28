@@ -26,7 +26,7 @@ file(
 
 add_executable(
     chessProject
-    main.cpp
+    src/logic/main.cpp
     ${SOURCE}
     ${HEADER}
     )

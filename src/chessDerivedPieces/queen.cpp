@@ -1,10 +1,10 @@
 #include "include/chessDerivedPieces/queen.h"
 
 
-Queen::Queen(bool color, Coordinate coordinate) : ChessPiece(color, coordinate) {}
+Queen::Queen(Player color, Coordinate coordinate) : ChessPiece(color, coordinate) {}
 
 std::string Queen::getPieceSymbol() const {
-    return m_color ? "♛" : "♕";
+    return m_color == BLACK ? "♛" : "♕";
 }
 
 std::vector<Coordinate> Queen::availableMoves(const ChessBoard &board) const {
