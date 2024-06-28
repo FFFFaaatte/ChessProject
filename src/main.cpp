@@ -31,6 +31,7 @@ int main() {
             std::cout << "Invalid move. Please try again.\n";
     }
 
+    game.displayBoard();
     game.announceWinner();
     return 0;
 }
