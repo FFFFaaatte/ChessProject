@@ -6,6 +6,7 @@
 #include "include/logic/chessboard.h"
 #include "include/logic/coordinate.h"
 #include "include/logic/player.h"
+#include "include/logic/networkmanager.h"
 
 
 class GameManagement {

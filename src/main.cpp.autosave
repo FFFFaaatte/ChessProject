@@ -21,11 +21,10 @@ int main() {
 
     while (!game.isGameOver()) {
         game.displayBoard();
-        if ((isServer && game.getCurrentPlayer() == WHITE) || (!isServer && game.getCurrentPlayer() == BLACK)) {
+        if ((isServer && game.getCurrentPlayer() == WHITE) || (!isServer && game.getCurrentPlayer() == BLACK))
             handlePlayerMove(game, networkManager, username, isServer);
-        } else {
-            handleOpponentMove(game, networkManager);
-        }
+        else 
+            handleOpponentMove(game, networkManager);       
     }
 
     game.displayBoard();
@@ -82,11 +81,10 @@ void handlePlayerMove(GameManagement& game, std::shared_ptr<NetworkManager>& net
 
         Coordinate from(7 - (match[1].str()[1] - '1'), match[1].str()[0] - 'a');
         Coordinate to(7 - (match[2].str()[1] - '1'), match[2].str()[0] - 'a');
-        if (!game.makeMove(from, to)) {
+        if (!game.makeMove(from, to)) 
             std::cout << "Invalid move. Please try again.\n";
-        } else {
+        else 
             validMove = true;
-        }
     }
 
     if (!networkManager->sendMove(move)) {
